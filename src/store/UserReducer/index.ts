@@ -41,13 +41,24 @@ export const logIn =({
     try{
         await api.get(`/sessionuser/${user[1].substr(0,1)}`)
         dispatch(setIsLoginIn(false))
-        Toast.show({
-            position: 'top',
-            type:'success',
-            text1: "Login Efetuado com Sucesso",
-            autoHide: true,
-            visibilityTime: 1000
-        })
+        if(password === 'paulo@1'){
+            Toast.show({
+                position: 'top',
+                type:'success',
+                text1: "Login Efetuado com Sucesso",
+                autoHide: true,
+                visibilityTime: 1000
+            })
+        }else{
+            Toast.show({
+                position: 'top',
+                type:'error',
+                text1: 'Falha no Login',
+                text2: 'Verifique suas Credenciais',
+                autoHide: true,
+                visibilityTime: 1000
+            })
+        }
     }catch(error){
         dispatch(setIsLoginIn(false))        
         Toast.show({
