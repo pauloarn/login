@@ -52,7 +52,7 @@ const stylesTablet = StyleSheet.create<IStyle>({
         backgroundColor: '#FAF5FF',         
         alignSelf: 'flex-end',
         alignItems: 'center',
-        height: hp('30%'),
+        height: hp('35%'),
         width: wp('57%')
     },
     bottomTextContainer:{
